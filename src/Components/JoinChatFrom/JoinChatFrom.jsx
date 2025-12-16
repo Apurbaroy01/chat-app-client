@@ -26,13 +26,13 @@ const JoinChatFrom = ({onJoin, username, setUsername, roomId, setRoomId}) => {
                     {/* Room Name */}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text font-medium">Room Name</span>
+                            <span className="label-text font-medium">Name</span>
                         </label>
                         <div className="relative">
                             <FaDoorOpen className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                             <input
                                 type="text"
-                                placeholder="Enter room name"
+                                placeholder="Enter your name"
                                 required
                                 className="input input-bordered w-full pl-10"
                                 onChange={(e)=>setUsername(e.target.value)}

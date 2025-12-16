@@ -102,8 +102,8 @@ const ChatWindow = ({ username, roomId, socket }) => {
         <div className="flex flex-col h-screen bg-[#e5ddd5]">
 
             {/* Header */}
-            <div className="bg-[#075e54] text-center text-white px-4 py-3 shadow">
-                <h2 className="font-semibold text-lg">Room Id: {roomId}</h2>
+            <div className="bg-[#075e54] text-center text-white px-4 py-2 shadow">
+                <h2 className="font-semibold text-lg">Room password: {roomId}</h2>
                 <p className="text-sm opacity-90">Welcome, {username}</p>
             </div>
 
