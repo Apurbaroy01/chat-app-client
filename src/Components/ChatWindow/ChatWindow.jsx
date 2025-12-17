@@ -30,6 +30,12 @@ const ChatWindow = ({ username, roomId, socket }) => {
 
 
     useEffect(() => {
+        // Receive previous messages
+        socket.on("room_messages", (messages) => {
+            setMessages(messages); // set state with chat history
+        });
+
+
         // receving message from server
         socket.on("message", ({ username, text, type }) => {
             setMessages(prevMessagea => [...prevMessagea, {
@@ -38,10 +44,10 @@ const ChatWindow = ({ username, roomId, socket }) => {
                 text,
                 type,
 
-
             }])
         })
         return () => {
+            socket.off("room_messages");
             socket.off("message");
         }
     }, [socket]);
